@@ -1,0 +1,27 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+
+    <input type="hidden" name="id" [value]="service.formData.id" />
+    <div class="form-group">
+        <label class="m-2"><b>AD SOYAD</b></label>
+        <input class="form-control form-control-lg" placeholder="Ad Soyad" name="name"
+            #name="ngModel" [(ngModel)]="service.formData.name"
+            required [class.invalid]="name.invalid && name.touched">
+    </div>
+
+    <div class="form-group">
+        <label class="m-2"><b>TELEFON NUMARASI</b></label>
+        <input class="form-control form-control-lg" placeholder="Telefon Numarası" name="phoneNumber"
+            #phoneNumber="ngModel" [(ngModel)]="service.formData.phoneNumber"
+            required [class.invalid]="phoneNumber.invalid && phoneNumber.touched">
+    </div>
+
+    <div class="form-group d-grid gap-2 m-4">
+        <button class="btn btn-outline-dark" type="submit"><b>KAYDET</b></button>
+    </div>
+
+    <div class="form-group d-grid gap-2 m-4">
+        <button class="btn btn-outline-dark" type="button" (click)="resetForm(form)"><b>TEMİZLE</b></button>
+    </div>
+</form>
+
+
