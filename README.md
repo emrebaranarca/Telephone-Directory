@@ -4,7 +4,7 @@
 Built with .NET framework and Angular. Contact directory.
 
 
-## Kullanılan Teknolojiler
+## Using Technologies
 
 **Client:** Angular
 
